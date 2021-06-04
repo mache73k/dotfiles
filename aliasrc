@@ -1,0 +1,69 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+# [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	mkd="mkdir -pv" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ffmpeg="ffmpeg -hide_banner"
+
+# Colorize commands when possible.
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	#ls="ls -hN --group-directories-first" \
+    grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi"
+
+# These common commands are just too long! Abbreviate them.
+alias \
+	dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" \
+	ka="killall" \
+	g="git" \
+	trem="transmission-remote" \
+	YT="youtube-viewer" \
+	sdn="sudo shutdown -h now" \
+	f="$FILE" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	p="sudo pacman" \
+	xi="sudo xbps-install" \
+	xr="sudo xbps-remove -R" \
+	xq="xbps-query" \
+	z="zathura" \
+	up="cd .." \
+	alias up='cd ..'
+	alias update="sudo pacman -Syu" \
+	alias aurup="yay -Syu" \
+	alias kleanp="sudo pacman -Scc" \
+	alias kleany="yay -Scc" \
+#	alias kleano="sudo pacman -R $(pacman -Qdt | awk '{print $1}')" \
+    alias mnt="udisksctl mount -b" \
+	alias unmnt="udisksctl unmount -b" \
+	alias get="sudo pacman -S" \
+	alias remove="sudo pacman -R" \
+	alias c="sudo protonvpn c --cc US" \
+	alias ds="sudo protonvpn d" \
+	alias n="sudo wifi-menu wlp0s29f7u1" \
+	alias ntl="sudo wondershaper -a wlp0s29f7u1 -d 4000 -u 300" \
+        alias ntf="sudo wondershaper -ca wlp0s29f7u1" \
+        alias nthg="sudo nethogs" \
+        alias s="watch -n0.5 iwconfig" \
+        alias x="curl rate.sx" \
+	alias vpn="sudo protonvpn" \
+        alias nt="sudo systemctl restart NetworkManager" \
+        alias chlist="sudo iwlist wlp0s29f7u1 scan | grep Frequency | sort | uniq -c | sort -n"
+        alias dn="sudo ifconfig wlp12s0 down" \
+	alias pv="pipe-viewer" 
+#    alias l="sudo wondershaper -ca wlp0s29f7u1 && wondershaper -a wlp0s29f7u1 -d 1300 -u 200"
+alias \
+	magit="nvim -c MagitOnly" \
+#	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" \
+#	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
+	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
