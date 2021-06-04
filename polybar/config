@@ -34,7 +34,7 @@ orange = ${xrdb:color12}
 yellow = ${xrdb:color12}
 light-green = ${xrdb:color12}
 green = ${xrdb:color12}
-wm-border-color = ${xrdb:color6}
+wm-border-color = #57496D
 
 [bar/basic]
 ;monitor = ${env:MONITOR:HDMI-1}
